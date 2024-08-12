@@ -20,6 +20,7 @@ test('placeorder', async ({ page }) => {
       await page.waitForTimeout(1000)
    // For Entering OTP
    await page.getByRole('textbox').first().click();
+   await page.waitForTimeout(1000)
    await page.getByRole('textbox').first().fill('1');
    await page.getByRole('textbox').nth(1).fill('1');
    await page.getByRole('textbox').nth(2).fill('1');
