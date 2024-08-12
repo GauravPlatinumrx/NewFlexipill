@@ -132,6 +132,7 @@ test('Test 1', async ({ page }) => {
       await page.click("(//div[@class='my-orders_order_details__info_cont__qAMR5'])[1]");      
       await page.waitForTimeout(1000)
       const cancelOrderButton = await page.$("//button[normalize-space()='Cancel Order']"); 
+      await page.waitForTimeout(2000)
       cancelOrderButton.scrollIntoViewIfNeeded();
       await page.waitForTimeout(2000)
       cancelOrderButton.click()
