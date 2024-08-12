@@ -117,11 +117,12 @@ import { test, expect } from '@playwright/test';
       await expect(page.getByRole('textbox').nth(1)).toHaveValue('1');
       await expect(page.getByRole('textbox').nth(2)).toHaveValue('1');
       await expect(page.getByRole('textbox').nth(3)).toHaveValue('1');
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(1000)
       await page.getByRole('link', { name: 'Profile' }).click();
       await page.click("(//div[@class='my-orders_order_details__info_cont__qAMR5'])[1]");      
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(1000)
       const cancelOrderButton = await page.$("//button[normalize-space()='Cancel Order']"); 
+      await page.waitForTimeout(1000)
       cancelOrderButton.scrollIntoViewIfNeeded();
       cancelOrderButton.click()
     await page.waitForTimeout(1000);
