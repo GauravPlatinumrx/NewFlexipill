@@ -134,11 +134,11 @@ test('Test 1', async ({ page }) => {
 
       await page.evaluate(() => window.scrollBy(0, 400))
       await page.waitForTimeout(2000)
-      const cancelOrderButton = await page.$("//button[normalize-space()='Cancel Order']"); 
+       await page.click("//button[normalize-space()='Cancel Order']"); 
       // await page.waitForTimeout(2000)
       // cancelOrderButton.scrollIntoViewIfNeeded();
-      await page.waitForTimeout(2000)
-      cancelOrderButton.click()
+    //  await page.waitForTimeout(1000)
+    //  cancelOrderButton.click()
     await page.waitForTimeout(1000);
     await page.click("//button[normalize-space()='Yes, Cancel']")
     await page.waitForTimeout(1000);
