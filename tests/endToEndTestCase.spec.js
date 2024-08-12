@@ -87,7 +87,7 @@ import { test, expect } from '@playwright/test';
 //     });
 
 
-    test.only('cancelOrder', async ({ page }) => {
+    test('cancelOrder', async ({ page }) => {
     
         // Open WebSite    
        const URL = await page.goto('https://flexipill-ui-new-staging.vercel.app')
