@@ -63,18 +63,18 @@ test('placeorder', async ({ page }) => {
     await expect(page).toHaveURL(' https://flexipill-ui-new-staging.vercel.app/cart');
     await page.waitForTimeout(1000);
 
-  //   //Click on View Coupon to see all coupons
-  //   await page.click("text='View all coupons >>'")
-  //   await page.waitForTimeout(2000)
+    //Click on View Coupon to see all coupons
+    await page.click("text='View all coupons >>'")
+    await page.waitForTimeout(2000)
 
-  //   //Scroll to Particular coupon
-  //   const elementTwo = page.getByText('TestDisc5');
-  //   await expect(elementTwo).toBeVisible();
-  //   await elementTwo.scrollIntoViewIfNeeded();
+    //Scroll to Particular coupon
+    const elementTwo = page.getByText('TRY100');
+    await expect(elementTwo).toBeVisible();
+    await elementTwo.scrollIntoViewIfNeeded();
    
-  //  // Apply the coupon
-  //  await page.click("(//div[@class='coupon-card_coupon-card-apply__28qnu'])[7]")
-  //   await page.waitForTimeout(2000);
+   // Apply the coupon
+   await page.click("(//div[@class='coupon-card_coupon-card-apply__28qnu'])[9]")
+    await page.waitForTimeout(2000);
     //Scroll to COD and Choose Payment method as COD
     const COD =  page.getByText('Cash on delivery (COD)'); //Cash on delivery (COD)
     await expect(COD).toBeVisible();
@@ -88,7 +88,7 @@ test('placeorder', async ({ page }) => {
 
 
   //   test.only('cancelOrder', async ({ page }) => {
-//
+    //
   //       // Open WebSite    
   //      const URL = await page.goto('https://flexipill-ui-new-staging.vercel.app')
   //         //Verigy the URL is same 
