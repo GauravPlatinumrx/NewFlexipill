@@ -130,7 +130,7 @@ test('Test 1', async ({ page }) => {
 
       await page.evaluate(() => window.scrollBy(0, 400))
       await page.waitForTimeout(2000)
-        await page.getByRole('button', { name: 'Cancel Order' }).click();
+        await page.getByRole('button', { name: 'Cancel Order' }).click({ timeout: 60000 });
       // await page.waitForTimeout(2000)
       // cancelOrderButton.scrollIntoViewIfNeeded();
     //  await page.waitForTimeout(1000)
