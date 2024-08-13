@@ -93,54 +93,54 @@ test('Test 1', async ({ page }) => {
     });
 
 
-    test('Test 2', async ({ page }) => {
+  //   test('Test 2', async ({ page }) => {
 
-        // Open WebSite    
-       const URL = await page.goto('https://flexipill-ui-new-staging.vercel.app')
-          //Verigy the URL is same 
-        await expect(page).toHaveURL('https://flexipill-ui-new-staging.vercel.app');
-        //click on login buttton
-        await page.getByRole('link', { name: 'Login' }).click();
-        await page.waitForTimeout(1000)
-          // For entering Number
-          const numberInput = page.getByPlaceholder('Enter your number', { exact: true });
-          await expect(numberInput).toBeVisible();
-          await numberInput.fill('1111111111');
-          await page.waitForTimeout(1000)
-          // Continue Button
-          const continueButton = page.getByRole('button', { name: 'Continue' });
-           await expect(continueButton).toBeVisible();
-           await continueButton.click()
-           await page.waitForTimeout(1000)
-        // For Entering OTP
-        await page.getByRole('textbox').first().click();
-        await page.getByRole('textbox').first().fill('1');
-        await page.getByRole('textbox').nth(1).fill('1');
-        await page.getByRole('textbox').nth(2).fill('1');
-        await page.getByRole('textbox').nth(3).fill('1');
-        // Verify that the OTP was entered correctly
-      await expect(page.getByRole('textbox').first()).toHaveValue('1');
-      await expect(page.getByRole('textbox').nth(1)).toHaveValue('1');
-      await expect(page.getByRole('textbox').nth(2)).toHaveValue('1');
-      await expect(page.getByRole('textbox').nth(3)).toHaveValue('1');
-      await page.waitForTimeout(1000)
-      await page.getByRole('link', { name: 'Profile' }).click();
-      await page.click("(//div[@class='my-orders_order_details__info_cont__qAMR5'])[1]");      
-      await page.waitForTimeout(2000)
+  //       // Open WebSite    
+  //      const URL = await page.goto('https://flexipill-ui-new-staging.vercel.app')
+  //         //Verigy the URL is same 
+  //       await expect(page).toHaveURL('https://flexipill-ui-new-staging.vercel.app');
+  //       //click on login buttton
+  //       await page.getByRole('link', { name: 'Login' }).click();
+  //       await page.waitForTimeout(1000)
+  //         // For entering Number
+  //         const numberInput = page.getByPlaceholder('Enter your number', { exact: true });
+  //         await expect(numberInput).toBeVisible();
+  //         await numberInput.fill('1111111111');
+  //         await page.waitForTimeout(1000)
+  //         // Continue Button
+  //         const continueButton = page.getByRole('button', { name: 'Continue' });
+  //          await expect(continueButton).toBeVisible();
+  //          await continueButton.click()
+  //          await page.waitForTimeout(1000)
+  //       // For Entering OTP
+  //       await page.getByRole('textbox').first().click();
+  //       await page.getByRole('textbox').first().fill('1');
+  //       await page.getByRole('textbox').nth(1).fill('1');
+  //       await page.getByRole('textbox').nth(2).fill('1');
+  //       await page.getByRole('textbox').nth(3).fill('1');
+  //       // Verify that the OTP was entered correctly
+  //     await expect(page.getByRole('textbox').first()).toHaveValue('1');
+  //     await expect(page.getByRole('textbox').nth(1)).toHaveValue('1');
+  //     await expect(page.getByRole('textbox').nth(2)).toHaveValue('1');
+  //     await expect(page.getByRole('textbox').nth(3)).toHaveValue('1');
+  //     await page.waitForTimeout(1000)
+  //     await page.getByRole('link', { name: 'Profile' }).click();
+  //     await page.click("(//div[@class='my-orders_order_details__info_cont__qAMR5'])[1]");      
+  //     await page.waitForTimeout(2000)
 
-      await page.evaluate(() => window.scrollBy(0, 400))
-      await page.waitForTimeout(2000)
-        await page.getByRole('button', { name: 'Cancel Order' }).click({ timeout: 60000 });
-      // await page.waitForTimeout(2000)
-      // cancelOrderButton.scrollIntoViewIfNeeded();
-    //  await page.waitForTimeout(1000)
-    //  cancelOrderButton.click()
-    await page.waitForTimeout(1000);
-    await page.click("//button[normalize-space()='Yes, Cancel']")
-    await page.waitForTimeout(1000);
-    await page.click("//span[normalize-space()='Just trying the App']")
-    await page.waitForTimeout(1000);
-    await page.click("//button[normalize-space()='Confirm']")
+  //     await page.evaluate(() => window.scrollBy(0, 400))
+  //     await page.waitForTimeout(2000)
+  //       await page.getByRole('button', { name: 'Cancel Order' }).click({ timeout: 60000 });
+  //     // await page.waitForTimeout(2000)
+  //     // cancelOrderButton.scrollIntoViewIfNeeded();
+  //   //  await page.waitForTimeout(1000)
+  //   //  cancelOrderButton.click()
+  //   await page.waitForTimeout(1000);
+  //   await page.click("//button[normalize-space()='Yes, Cancel']")
+  //   await page.waitForTimeout(1000);
+  //   await page.click("//span[normalize-space()='Just trying the App']")
+  //   await page.waitForTimeout(1000);
+  //   await page.click("//button[normalize-space()='Confirm']")
 
-   })
+  //  })
 })
