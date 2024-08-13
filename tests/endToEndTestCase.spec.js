@@ -50,7 +50,7 @@ test('Test 1', async ({ page }) => {
     await page.waitForTimeout(1000)
 
     //Add to Cart button
-     await page.click("(//button[@type='button'])[1]")
+    await page.getByRole('button', { name: 'Add to Cart' }).click();
     // wait command
     await page.waitForTimeout(1000)
 
